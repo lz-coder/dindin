@@ -13,6 +13,9 @@ function App() {
 
   const fromInputRef = useRef();
 
+  const date = new Date();
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
   useEffect(() => {
     async function getCurrencies() {
       const response = await fetch('https://api.frankfurter.app/currencies');
@@ -72,8 +75,10 @@ function App() {
           selectValue={toSelectorValue}
           setSelectValue={setToSelectorValue}
         />
-
       </div>
+      <footer className='footer'>
+        <p>{month[date.getMonth()]} {date.getDay()}, {date.getFullYear()}</p>
+      </footer>
     </main>
   )
 }

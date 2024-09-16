@@ -30,7 +30,7 @@ function App() {
     
   }, []);
 
-  useEffect(convert, [fromInputRef, fromSelectorValue, toSelectorValue]);
+  useEffect(convert, [fromInputRef, fromSelectorValue, toSelectorValue, fromValue]);
 
   function convert() {
     fetch(`https://api.frankfurter.app/latest?amount=${fromInputRef.current.value}&from=${fromSelectorValue}&to=${toSelectorValue}`)
@@ -47,7 +47,7 @@ function App() {
     setFromSelectorValue(oldToSelector);
     setToSelectorValue(oldFromSelector);
 
-    convert();
+    //convert();
   }
 
   return (
@@ -65,7 +65,6 @@ function App() {
           setValue={setFromValue}
           selectValue={fromSelectorValue}
           setSelectValue={setFromSelectorValue}
-          execConvert={convert}
         />
         <SwapSelectorsButton onClick={swapSelectors} />
         <CurrencyCard

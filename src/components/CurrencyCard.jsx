@@ -8,7 +8,6 @@ export default function CurrencyCard({
   currencies,
   setSelectValue,
   selectValue,
-  execConvert,
 }) {
 
   function selectorChangeHandlder(e) {
@@ -17,7 +16,6 @@ export default function CurrencyCard({
 
   function fromInputChangeValueHandler(e) {
     setValue(e.target.value);
-    execConvert();
   }
 
   return (

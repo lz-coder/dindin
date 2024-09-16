@@ -51,7 +51,7 @@ function App() {
     <main id='app'>
       <header className='header'>
         <h1 className='title'>DinDin</h1>
-        <p className='desc'>Convert between currency</p>
+        <p className='desc'>Convert between currencies</p>
       </header>
       <div className='content'>
         <CurrencyCard

@@ -1,16 +1,23 @@
-import { useState, useEffect } from "react";
 import "./styles/currency-card.css";
 
 export default function CurrencyCard({
   from = true,
-  value = 1,
+  inputRef,
+  value,
+  setValue,
   currencies,
   setSelectValue,
-  selectValue
+  selectValue,
+  execConvert,
 }) {
-  
+
   function selectorChangeHandlder(e) {
     setSelectValue(e.target.value);
+  }
+
+  function fromInputChangeValueHandler(e) {
+    setValue(e.target.value);
+    execConvert();
   }
 
   return (
@@ -32,7 +39,7 @@ export default function CurrencyCard({
         </select>
       </div>
       <div className="card-body" style={{ backgroundColor: from ? '#B4B4B4' : '#79E99F' }}>
-        {value}
+        <input ref={inputRef} value={value} onChange={fromInputChangeValueHandler} disabled={!from}></input>
       </div>
     </div>
   )

@@ -13,7 +13,7 @@ function App() {
   const fromInputRef = useRef();
 
   const date = new Date();
-  const month = [
+  const months = [
     "January",
     "February",
     "March",
@@ -95,8 +95,11 @@ function App() {
       </div>
       <footer className="footer">
         <p>
-          {month[date.getMonth()]} {date.getDate()}, {date.getFullYear()}
+          {months[date.getMonth()]} {date.getDate()}, {date.getFullYear()}
         </p>
+        <small>
+          Powered by <a href="https://frankfurter.dev/">Frankfurter API</a>
+        </small>
       </footer>
     </main>
   );

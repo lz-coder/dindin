@@ -98,7 +98,10 @@ function App() {
           {months[date.getMonth()]} {date.getDate()}, {date.getFullYear()}
         </p>
         <small>
-          Powered by <a href="https://frankfurter.dev/">Frankfurter API</a>
+          Powered by{" "}
+          <a href="https://frankfurter.dev/" target="_blank">
+            Frankfurter API
+          </a>
         </small>
       </footer>
     </main>

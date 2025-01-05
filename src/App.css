@@ -24,6 +24,10 @@
         }
         small {
             font-weight: normal;
+
+            a {
+                font-weight: bolder;
+            }
         }
     }
 }
